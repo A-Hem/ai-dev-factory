@@ -24,6 +24,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-   - name: Run generate-structure script
-    run: python mcp-orchestrator/generate_structure.py
-
+    - name: Run generate-structure script
+      run: python generate_structure.py
