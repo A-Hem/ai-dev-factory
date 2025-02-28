@@ -1,3 +1,7 @@
+
+# System Structure
+
+```mermaid
 graph TD
     A[Orchestrator] --> B[Task Decomposition AI]
     A --> C[Workers]
