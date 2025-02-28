@@ -1,8 +1,8 @@
-#System Structure
+# System Structure
 
-```mermaid
-graph TD
+## Directory Structure
 
+```
 mcp-orchestrator/
 ├── core/
 │   ├── orchestrator.ts       # Main coordination logic
@@ -22,3 +22,19 @@ mcp-orchestrator/
 └── config/
     ├── workers.yaml          # Worker configurations
     └── mcp-extensions.yaml   # MCP extension points
+```
+
+## Structure Graph
+
+```mermaid
+graph TD
+    A[Orchestrator] --> B[Task Decomposition AI]
+    A --> C[Workers]
+    C --> D[ProjectScanner]
+    C --> E[CommandValidator]
+    C --> F[KnowledgeGraph]
+    A --> G[Evaluator]
+    G --> H[Feedback Processor]
+    H --> I[Human Feedback]
+    H --> J[Auto-Optimization]
+```
