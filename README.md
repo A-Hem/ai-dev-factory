@@ -1,4 +1,10 @@
+
+[![Generate Structure](https://github.com/A-Hem/mcp-orchestrator/actions/workflows/generate-structure.yml/badge.svg)](https://github.com/A-Hem/mcp-orchestrator/actions/workflows/generate-structure.yml)
+
+
+
 "Dev Context" MCP-native orchestrator core:
+
 
 ## MCP-Integrated Orchestrator Architecture
 
