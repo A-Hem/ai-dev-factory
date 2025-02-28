@@ -1,0 +1,10 @@
+graph TD
+    A[Orchestrator] --> B[Task Decomposition AI]
+    A --> C[Workers]
+    C --> D[ProjectScanner]
+    C --> E[CommandValidator]
+    C --> F[KnowledgeGraph]
+    A --> G[Evaluator]
+    G --> H[Feedback Processor]
+    H --> I[Human Feedback]
+    H --> J[Auto-Optimization]
