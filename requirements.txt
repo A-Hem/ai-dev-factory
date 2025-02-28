@@ -14,7 +14,7 @@ scikit-learn>=1.2.0
 torch>=2.0.0
 
 # Data Structures and Utilities
-priority-queue>=1.0.0
+# fix version priority-queue>=?
 networkx>=3.0
 sortedcontainers>=2.4.0
 cachetools>=5.3.0
