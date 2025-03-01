@@ -1,0 +1,67 @@
+yaml
+messages:
+  TaskMessage:
+    type: object
+    extends: MCP.BaseMessage
+    properties:
+      metadata:
+        type: object
+        properties:
+          taskId: { type: string }
+          parentTask: { type: string }
+          taskType: 
+            type: string
+            enum: [scan, validate, learn, decompose]
+          status:
+            type: string
+            enum: [pending, running, completed, failed]
+          retries: { type: number }
+          dependencies: { type: array, items: string }
+          
+  ProjectScanContent:
+    type: object
+    properties:
+      operation: 
+        type: string
+        enum: [find-boundaries, detect-dependencies]
+      paths: { type: array, items: string }
+      
+  CommandValidationContent:
+    type: object
+    properties:
+      rawCommand: { type: string }
+      context:
+        type: object
+        properties:
+          os: { type: string }
+          shell: { type: string }
+          currentDir: { type: string }
+```
+
+**5. Configuration Files (`config/workers.yaml`):**
+
+```yaml
+workers:
+  project-scanner:
+    enabled: true
+    concurrency: 2
+    scanDepth: 5
+    signatureFiles:
+      - package.json
+      - requirements.txt
+      - pom.xml
+      - *.csproj
+      
+  command-validator:
+    enabled: true
+    concurrency: 4
+    safetyChecks:
+      destructive: true
+      pathTraversal: true
+      overwriteProtection: true
+      
+  knowledge-worker:
+    enabled: true
+    maxPatterns: 1000
+    refreshInterval: 300 # 5 minutes
+```

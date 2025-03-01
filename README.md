@@ -77,13 +77,12 @@ This approach gives us several advantages:
 
 4. **Protocol Synergy** - Workers benefit from MCP's existing ecosystem
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<br>
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<br>
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<br>
-<br>
- <H4>Example Workflow Execution</H4>
+
+ Example Workflow Execution
 ```typescript
 // Bootstrap the system
 const mcpClient = new MCPClient();
