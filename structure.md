@@ -1,40 +1,24 @@
-# System Structure
+# Project Structure
 
-## Directory Structure
+## Directories
 
-```
-mcp-orchestrator/
-├── core/
-│   ├── orchestrator.ts       # Main coordination logic
-│   ├── task-manager.ts       # Task decomposition/sequencing
-│   └── priority-queue.ts     # Priority-based task execution
-├── workers/
-│   ├── project-scanner.ts    # Project structure analysis
-│   ├── command-validator.ts  # Command safety checks
-│   ├── knowledge-worker.ts   # Error pattern matching
-│   └── ai-integration.ts     # External AI communication
-├── messages/
-│   ├── types.ts              # Message schema definitions
-│   ├── parsers.ts            # Message validation/transformation
-│   └── serializers.ts        # Message serialization
-├── schemas/
-│   └── orchestration.yaml    # Protocol buffer schemas
-└── config/
-    ├── workers.yaml          # Worker configurations
-    └── mcp-extensions.yaml   # MCP extension points
-```
+- **core**: Contains the main orchestrator logic.
+- **services**: Contains various services used by the orchestrator.
+- **workers**: Contains worker classes for different tasks.
+- **data**: Contains local data files used by the knowledge graph service.
 
-## Structure Graph
+## Files
 
-```mermaid
-graph TD
-    A[Orchestrator] --> B[Task Decomposition AI]
-    A --> C[Workers]
-    C --> D[ProjectScanner]
-    C --> E[CommandValidator]
-    C --> F[KnowledgeGraph]
-    A --> G[Evaluator]
-    G --> H[Feedback Processor]
-    H --> I[Human Feedback]
-    H --> J[Auto-Optimization]
-```
+- **core/orchestrator.ts**: Main orchestrator logic.
+- **services/cacheService.ts**: Cache service for storing and retrieving cached data.
+- **services/knowledgeGraphService.ts**: Knowledge graph service for managing and querying the knowledge graph.
+- **services/contextPreprocessor.ts**: Service for preprocessing and compressing context data.
+- **workers/localDataWorker.ts**: Worker for processing local datasets.
+- **workers/staticAnalysisWorker.ts**: Worker for performing static code analysis.
+- **workers/dependencyCheckerWorker.ts**: Worker for checking dependencies.
+- **workers/innovationSuggestionWorker.ts**: Worker for suggesting innovative features or improvements.
+- **data/dbpedia_data.json**: Sample DBpedia data file.
+- **data/conceptnet_data.json**: Sample ConceptNet data file.
+- **package.json**: Node.js project configuration and dependencies.
+- **requirements.txt**: Python dependencies (if any).
+- **structure.md**: Project structure documentation.

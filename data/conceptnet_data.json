@@ -1,0 +1,18 @@
+[
+  {
+    "start": "example",
+    "end": "sample"
+  },
+  {
+    "start": "test",
+    "end": "exam"
+  },
+  {
+    "start": "concept",
+    "end": "idea"
+  },
+  {
+    "start": "network",
+    "end": "web"
+  }
+]
