@@ -76,5 +76,40 @@ This approach gives us several advantages:
 3. **Security Inheritance** - Leverages MCP's existing security model
 
 4. **Protocol Synergy** - Workers benefit from MCP's existing ecosystem
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+<br>
+ <H4>Example Workflow Execution</H4>
+```typescript
+// Bootstrap the system
+const mcpClient = new MCPClient();
+const orchestrator = new MCPOrchestrator(mcpClient);
 
+// Send initial request
+mcpClient.sendMessage({
+  role: 'user',
+  content: 'Why does npm install fail in my project?',
+  metadata: {
+    sessionId: '123',
+    context: {
+      currentDir: '/projects/mixed-app',
+      os: 'linux'
+    }
+  }
+});
 
+// Worker responses will flow through the orchestrator
+mcpClient.onMessage(msg => {
+  if (msg.metadata?.taskType === 'project-scan') {
+    console.log('Scan result:', msg.content);
+  }
+  
+  if (msg.metadata?.status === 'completed') {
+    console.log('Task completed:', msg.metadata.taskId);
+  }
+});
+```
