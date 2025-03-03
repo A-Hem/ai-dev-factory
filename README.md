@@ -4,7 +4,7 @@
 
 ## Overview (I'm forking and building simplified examples, will be a work in progress....) 
 
-The MCP Orchestrator is a context compression system designed for agent knowledge graph tasks using a modular and extensible architecture. It leverages it's logic and components to streamline and extract to and from MCP, ai model, and existing architecture knowledge graph, caching, and context preprocessing to optimize task execution and improve efficiency.
+The MCP Orchestrator is a context compression system designed for agent knowledge graph tasks using a modular and extensible architecture. It leverages it's logic and components to streamline and extract to and from MCP apis, ai models, and existing knowledge graph, caching, and context preprocessing (compression & additional optimization components like storing to optimize task execution and improve efficiency.
 
 ## Project Structure
 
