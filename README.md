@@ -2,13 +2,13 @@
 
 # MCP Orchestrator
 
-## Overview
+## Overview (I'm forking and building some speculative experimentations and simplified examples, will be a work in progress as the self sufficient ai transforms into a living organism....) 
 
-The MCP Orchestrator is a system designed to manage and execute various tasks using a modular and extensible architecture. It leverages a knowledge graph, caching, and context preprocessing to optimize task execution and improve efficiency.
+The MCP Orchestrator is the core logic for a modular preprocessor context compression system designed for agent knowledge graph tasks using an extensible architecture. The idea is to leverage it's logic and components to extract max value to and from MCP apis, ai models, and existing knowledge graph, caching, and context preprocessing, compression & optimize task execution, identify and nurture novel ideas. .
 
 ## Project Structure
 
-### Directories
+### Directories   structure.md
 
 - **core**: Contains the main orchestrator logic.
 - **services**: Contains various services used by the orchestrator.
